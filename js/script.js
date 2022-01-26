@@ -24,3 +24,7 @@ heading.style.fontSize = "2em"
 //tror ikke at dette er riktig
 var heading = document.querySelector("h3")
 heading.classList.add("Subheading")
+
+
+
+//question 5
