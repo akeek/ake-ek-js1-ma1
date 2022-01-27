@@ -9,10 +9,14 @@ const cat = {
 cat.complain();
 
 
+
+
 //question 2
-var heading = document.querySelector("h3")
+const heading = document.querySelector("h3")
 
 heading.innerHTML = "Updated heading"
+
+
 
 
 //question 3
@@ -20,7 +24,13 @@ heading.innerHTML = "Updated heading"
 heading.style.fontSize = "2em"
 
 
+
+
 //question 4
+
+heading.className = "subheading"
+console.log(heading.className)
+
 
 
 
@@ -29,14 +39,65 @@ heading.style.fontSize = "2em"
 const paragraphs = document.querySelectorAll("p")
 
 for(let i = 0; i < paragraphs.length; i++){
-    // console.dir(paragraphs[i].innerHTML);
     paragraphs[i].style.color = "red"
 }
+
 
 
 
 //question 6
 var resultsContainer = document.querySelector(".results")
 
-resultsContainer.innerHTML = "<p>" + "New paragraph" + "</p>"
+resultsContainer.innerHTML = `<p>"New paragraph"</p>`
 resultsContainer.style.backgroundColor = "yellow"
+
+
+
+
+
+//question 7
+
+const cats = [
+    {
+        name: "Blob",
+        age: 10
+    },
+    {
+        name: "Harold",
+    },
+    {
+        name: "Blurt",
+        age: 21
+    }
+];
+
+function catFunction(list) {
+    for(let i = 0; i < list.length; i++){
+        console.log(list[i].name)
+    }
+}
+
+catFunction(cats)
+
+
+
+
+
+//question 8
+
+const catContainer = document.querySelector(".cat-container")
+
+
+
+function createCats(cats) {
+    for(let i = 0; i < cats.length; i++){
+        const catName = cats[i].name;
+        let catAge = cats[i].age;
+        if(catAge === undefined){
+            catAge = ("Age unknown");
+        }
+        catContainer.innerHTML += `<div><h5>${catName}</h5><p>${catAge}</p></div>`
+    }
+}
+
+createCats(cats)
