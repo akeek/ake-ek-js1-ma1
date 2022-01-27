@@ -21,10 +21,22 @@ heading.style.fontSize = "2em"
 
 
 //question 4
-//tror ikke at dette er riktig
-var heading = document.querySelector("h3")
-heading.classList.add("Subheading")
 
 
 
 //question 5
+
+const paragraphs = document.querySelectorAll("p")
+
+for(let i = 0; i < paragraphs.length; i++){
+    // console.dir(paragraphs[i].innerHTML);
+    paragraphs[i].style.color = "red"
+}
+
+
+
+//question 6
+var resultsContainer = document.querySelector(".results")
+
+resultsContainer.innerHTML = "<p>" + "New paragraph" + "</p>"
+resultsContainer.style.backgroundColor = "yellow"
