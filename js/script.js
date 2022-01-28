@@ -29,7 +29,7 @@ heading.style.fontSize = "2em"
 //question 4
 
 heading.className = "subheading"
-console.log(heading.className)
+console.log(heading)
 
 
 
