@@ -89,9 +89,12 @@ function createCats(cats) {
     for(let i = 0; i < cats.length; i++){
         const catName = cats[i].name;
         let catAge = cats[i].age || "Age unknown";
+
+        //The use of if() instead:
         // if(catAge === undefined){
         //     catAge = ("Age unknown");
         // }
+
         catContainer.innerHTML += `<div><h5>${catName}</h5><p>${catAge}</p></div>`;
     }
 }
