@@ -67,6 +67,10 @@ const cats = [
     {
         name: "Blurt",
         age: 21
+    },
+    {
+        name: "Julie",
+        age: "ThirtyOne"
     }
 ];
 
@@ -89,12 +93,10 @@ function createCats(cats) {
     let html = "";
     for(let i = 0; i < cats.length; i++){
         const catName = cats[i].name;
-        let catAge = cats[i].age || "Age unknown";
-
-        //The use of if() instead:
-        // if(catAge === undefined){
-        //     catAge = ("Age unknown");
-        // }
+        let catAge = cats[i].age || "Age unknown"
+        if(isNaN(catAge)){
+            catAge = ("Age unknown");
+        }
 
     html += `<div>
                 <h5>${catName}</h5>
@@ -104,28 +106,29 @@ function createCats(cats) {
     return html;
 }
 
-const updateHtml = createCats(cats);
-
 const catContainer = document.querySelector(".cat-container");
+
+const updateHtml = createCats(cats);
 
 catContainer.innerHTML = updateHtml
 
 
 
 
-//Another solution to q8?
+// // Another solution to q8?
 
 // const catContainer = document.querySelector(".cat-container")
 
 // function createCats(cats) {
 //     for(let i = 0; i < cats.length; i++){
 //         const catName = cats[i].name;
-//         let catAge = cats[i].age || "Age unknown"
+//         let catAge = cats[i].age
 
 //         // The use of if() instead:
-//         // if(catAge === undefined){
-//         //     catAge = ("Age unknown");
-//         // }
+//         let catAge = cats[i].age
+//         if(isNaN(catAge)){
+//             catAge = ("Age unknown");
+//         }
 //         catContainer.innerHTML +=   `<div>
 //                                         <h5>${catName}</h5>
 //                                         <p>${catAge}</p>
