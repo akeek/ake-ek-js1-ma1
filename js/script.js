@@ -70,7 +70,11 @@ const cats = [
     },
     {
         name: "Julie",
-        age: "ThirtyOne"
+        age: "29"
+    },
+    {
+        name: "Åke",
+        age: "thirty three"
     }
 ];
 
