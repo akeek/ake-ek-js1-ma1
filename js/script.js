@@ -95,13 +95,13 @@ catFunction(cats);
 function createCats(cats) {
 
     let html = "";
+
     for(let i = 0; i < cats.length; i++){
         const catName = cats[i].name;
         let catAge = cats[i].age || "Age unknown"
         if(isNaN(catAge)){
             catAge = ("Age unknown");
         }
-
     html += `<div>
                 <h5>${catName}</h5>
                 <p>${catAge}</p>
