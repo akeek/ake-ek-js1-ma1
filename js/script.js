@@ -72,10 +72,6 @@ const cats = [
         name: "Julie",
         age: "29"
     },
-    {
-        name: "Åke",
-        age: "thirty three"
-    }
 ];
 
 function catFunction(list) {
@@ -119,17 +115,14 @@ catContainer.innerHTML = updateHtml
 
 
 
-// // Another solution to q8?
+// Another solution to q8?
 
 // const catContainer = document.querySelector(".cat-container")
 
 // function createCats(cats) {
 //     for(let i = 0; i < cats.length; i++){
 //         const catName = cats[i].name;
-//         let catAge = cats[i].age
-
-//         // The use of if() instead:
-//         let catAge = cats[i].age
+//         let catAge = cats[i].age || "Age unknown"
 //         if(isNaN(catAge)){
 //             catAge = ("Age unknown");
 //         }
